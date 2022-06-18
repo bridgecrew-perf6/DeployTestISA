@@ -4,7 +4,7 @@ orbs:
 
 jobs:
   build_backend:
-    working_directory: /DeployTestISA
+    working_directory: ~/DeployTestISA
     docker:
       - image: cimg/openjdk:8.0
     steps:
@@ -13,7 +13,7 @@ jobs:
       - run: ls -l
       - run:
           name: Build
-          command: cd SpringProject && mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=mrsisatim20
+          command: cd SpringProject && mvn sonar:sonar -Dsonar.projectKey=$PROJECT_KEY -Dsonar.organization=mzaric_13 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
   deploy_backend:
     docker:
       - image: cimg/openjdk:8.0
