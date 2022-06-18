@@ -1,5 +1,6 @@
 version: 2.1
 orbs:
+  heroku: circleci/heroku@1.2.6
   sonarcloud: sonarsource/sonarcloud@1.0.3
 
 jobs:
