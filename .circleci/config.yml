@@ -1,7 +1,6 @@
 version: 2.1
 orbs:
   sonarcloud: sonarsource/sonarcloud@1.0.3
-  heroku: circleci/heroku@1.2.6
 
 jobs:
   build_backend:
