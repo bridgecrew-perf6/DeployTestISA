@@ -14,7 +14,7 @@ jobs:
       - run: ls -l
       - run:
           name: Build
-          command: cd SpringProject && mvn verify sonar:sonar -Dsonar.projectKey=mzaric13_DeployTestISA
+          command: cd SpringProject && mvn sonar:sonar -Dsonar.projectKey=$PROJECT_KEY -Dsonar.organization=mzaric_13 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
   deploy_backend:
     docker:
       - image: cimg/openjdk:8.0
