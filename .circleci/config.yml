@@ -41,7 +41,7 @@ jobs:
           - ./node_modules
   deploy_frontend:
     docker:
-      - image: cimg/openjdk:8.0
+      - image: circleci/node:8.5.5
     steps:
        - checkout
        - run:
