@@ -31,9 +31,6 @@ jobs:
       - checkout
       - run: cd VueProject/isa-mrs-front
       - run: ls -l 
-      - run:
-          name: update-npm
-          command: "sudo npm install -g npm@5"
       - restore_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
       - run:
