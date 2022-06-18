@@ -49,7 +49,7 @@ jobs:
        - checkout
        - run:
             name: Deploy VueProject
-            command: git subtree push --prefix VueProject/isa-mrs-front https://heroku:$HEROKU_API_KEY@git.heroku.com/test-isamrs-frontend.git master
+            command: git subtree push --prefix VueProject/isa-mrs-front https://heroku:$HEROKU_API_KEY@git.heroku.com/test-front-isa-mrs-tim3.git master
   
 workflows:
   sample:
