@@ -68,7 +68,7 @@ import router from '@/router'
         },
         methods: {
             complain() {
-                axios.post("http://localhost:8088/complaints/makeAComplaint", {
+                axios.post("https://isa-projekat-tim-3.herokuapp.com/complaints/makeAComplaint", {
                     reservationId: this.selected,
                     complaint: this.complaint,
                 },
@@ -110,7 +110,7 @@ import router from '@/router'
         },
         mounted () {
             if (window.sessionStorage.getItem("role") === "ROLE_client") {
-                axios.get("http://localhost:8088/reservations/getNonComplainedReservations", {
+                axios.get("https://isa-projekat-tim-3.herokuapp.com/reservations/getNonComplainedReservations", {
                     headers: {
                         Authorization: 'Bearer ' + window.sessionStorage.getItem('accessToken')
                     }

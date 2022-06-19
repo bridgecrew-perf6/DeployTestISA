@@ -32,7 +32,7 @@
         },
         mounted(){
             if (window.sessionStorage.getItem('role') === "ROLE_shipOwner") {
-                axios.get("http://localhost:8088/users/getLoggedUser", {
+                axios.get("https://isa-projekat-tim-3.herokuapp.com/users/getLoggedUser", {
                     headers: {
                         Authorization: 'Bearer ' + window.sessionStorage.getItem("accessToken")
                     }

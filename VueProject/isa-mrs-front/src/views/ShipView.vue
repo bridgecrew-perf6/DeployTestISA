@@ -181,7 +181,7 @@
 				}
 			},
             subscribe() {
-                axios.put("http://localhost:8088/clients/subscribe/" + this.$route.params.id, {
+                axios.put("https://isa-projekat-tim-3.herokuapp.com/clients/subscribe/" + this.$route.params.id, {
                 },
                 {
                     headers:{
@@ -193,7 +193,7 @@
                 })
             },
             unsubscribe() {
-                axios.put("http://localhost:8088/clients/unsubscribe/" + this.$route.params.id, {
+                axios.put("https://isa-projekat-tim-3.herokuapp.com/clients/unsubscribe/" + this.$route.params.id, {
                 },
                 {
                     headers:{
@@ -215,7 +215,7 @@
             }
         },
         mounted() {
-            axios.get("http://localhost:8088/ships/get/" + this.$route.params.id, 
+            axios.get("https://isa-projekat-tim-3.herokuapp.com/ships/get/" + this.$route.params.id, 
 				{
 					headers: {
 						Authorization: 'Bearer ' + window.sessionStorage.getItem("accessToken")
@@ -226,7 +226,7 @@
 				}
 			);
             if (window.sessionStorage.getItem("role") === "ROLE_client") {
-                axios.get("http://localhost:8088/clients/getLoggedClient", {
+                axios.get("https://isa-projekat-tim-3.herokuapp.com/clients/getLoggedClient", {
                     headers:{
                         Authorization: 'Bearer ' + window.sessionStorage.getItem("accessToken")
                     }

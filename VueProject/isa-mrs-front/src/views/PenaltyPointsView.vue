@@ -40,7 +40,7 @@ import router from '@/router'
         },
         mounted () {
             if (window.sessionStorage.getItem('role') === "ROLE_client") {
-                axios.get("http://localhost:8088/clients/getLoggedClient", {
+                axios.get("https://isa-projekat-tim-3.herokuapp.com/clients/getLoggedClient", {
                 headers:{
                         Authorization: 'Bearer ' + window.sessionStorage.getItem("accessToken")
                     }

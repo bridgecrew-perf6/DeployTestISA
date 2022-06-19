@@ -70,13 +70,13 @@ import router from '@/router'
         },
         mounted () {
             if (window.sessionStorage.getItem('role') === "ROLE_admin" || window.sessionStorage.getItem("role") === "ROLE_mainAdmin") {
-                axios.get("http://localhost:8088/ships/getAll").then((response) => {
+                axios.get("https://isa-projekat-tim-3.herokuapp.com/ships/getAll").then((response) => {
                     this.ships = response.data
                 }),
-                axios.get("http://localhost:8088/retreats/getAll").then((response) => {
+                axios.get("https://isa-projekat-tim-3.herokuapp.com/retreats/getAll").then((response) => {
                     this.retreats = response.data
                 }),
-                axios.get("http://localhost:8088/adventures/getAll").then((response) => {
+                axios.get("https://isa-projekat-tim-3.herokuapp.com/adventures/getAll").then((response) => {
                     this.adventures = response.data
                 })
             }

@@ -23,7 +23,7 @@
         props: ["service"],
         methods: {
             redirect(id){
-                axios.get("http://localhost:8088/users/findOwnerOfService/" + id,
+                axios.get("https://isa-projekat-tim-3.herokuapp.com/users/findOwnerOfService/" + id,
                 {
                     headers:{
                         Authorization: "Bearer " + window.sessionStorage.getItem("accessToken")
@@ -39,7 +39,7 @@
                 })                
             },
             deleteService(id){
-                axios.delete("http://localhost:8088/services/delete/" + id,
+                axios.delete("https://isa-projekat-tim-3.herokuapp.com/services/delete/" + id,
                 {
                     headers:{
                         Authorization: "Bearer " + window.sessionStorage.getItem("accessToken")

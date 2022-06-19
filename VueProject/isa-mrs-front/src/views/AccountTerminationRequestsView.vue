@@ -46,7 +46,7 @@
         },
         mounted() {
             if (window.sessionStorage.getItem('role') === "ROLE_admin" || window.sessionStorage.getItem("role") === "ROLE_mainAdmin") {
-                axios.get("http://localhost:8088/termination/findToTerminate",{
+                axios.get("https://isa-projekat-tim-3.herokuapp.com/termination/findToTerminate",{
                     headers:{
                         Authorization: 'Bearer ' + window.sessionStorage.getItem("accessToken")
                     }

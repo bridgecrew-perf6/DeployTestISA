@@ -54,7 +54,7 @@
                 }
             },
             addRetreatAvailability(id) {
-                axios.post('http://localhost:8088/retreats/add-availability/' + id, {
+                axios.post('https://isa-projekat-tim-3.herokuapp.com/retreats/add-availability/' + id, {
                     dateFrom: new Date(this.startDate),
                     dateTo: new Date(this.endDate),
                     timeFrom: this.startTime,
@@ -71,7 +71,7 @@
                 })
             },
             addShipAvailability(id) {
-                axios.post('http://localhost:8088/ships/add-availability/' + id, {
+                axios.post('https://isa-projekat-tim-3.herokuapp.com/ships/add-availability/' + id, {
                     dateFrom: new Date(this.startDate),
                     dateTo: new Date(this.endDate),
                     timeFrom: this.startTime,
@@ -88,7 +88,7 @@
                 })
             },
             addAdventureAvailability(id) {
-                axios.post('http://localhost:8088/adventures/add-availability/' + id, {
+                axios.post('https://isa-projekat-tim-3.herokuapp.com/adventures/add-availability/' + id, {
                     dateFrom: new Date(this.startDate),
                     dateTo: new Date(this.endDate),
                     timeFrom: this.startTime,

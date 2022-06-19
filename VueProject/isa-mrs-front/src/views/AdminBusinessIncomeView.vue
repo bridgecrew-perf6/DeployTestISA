@@ -83,7 +83,7 @@
         },
         methods:{
             updatePercentage(){
-                axios.post("http://localhost:8088/discounts/updatePercentage",{
+                axios.post("https://isa-projekat-tim-3.herokuapp.com/discounts/updatePercentage",{
                     discount: this.newPercentage,
                     fromDate: new Date(),
                     toDate: new Date('2100-01-01 02:00:00')
@@ -97,13 +97,13 @@
                 })
             },
             search(){
-                axios.get("http://localhost:8088/reservations/findInDateSpan?fromDate=" + this.fromDate + "&toDate=" + this.toDate,{
+                axios.get("https://isa-projekat-tim-3.herokuapp.com/reservations/findInDateSpan?fromDate=" + this.fromDate + "&toDate=" + this.toDate,{
                     headers:{
                         Authorization: "Bearer " + window.sessionStorage.getItem("accessToken")
                     },
                 }).then((response) => {
                     this.reservations = response.data;
-                    axios.post("http://localhost:8088/reservations/calculateSystemIncome", {
+                    axios.post("https://isa-projekat-tim-3.herokuapp.com/reservations/calculateSystemIncome", {
                         reservationsDTO: this.reservations,
                     },{
                         headers:{
@@ -115,13 +115,13 @@
                 })
             },
             showAll(){
-                axios.get("http://localhost:8088/reservations/findAllNotCancelled",{
+                axios.get("https://isa-projekat-tim-3.herokuapp.com/reservations/findAllNotCancelled",{
                     headers:{
                         Authorization: "Bearer " + window.sessionStorage.getItem("accessToken")
                     }
                 }).then((response) =>{
                     this.reservations = response.data;
-                    axios.post("http://localhost:8088/reservations/calculateSystemIncome", {
+                    axios.post("https://isa-projekat-tim-3.herokuapp.com/reservations/calculateSystemIncome", {
                         reservationsDTO: this.reservations,
                     },{
                         headers:{
@@ -143,13 +143,13 @@
         },
         mounted () {
             if (window.sessionStorage.getItem('role') === "ROLE_admin" || window.sessionStorage.getItem("role") === "ROLE_mainAdmin") {
-                axios.get("http://localhost:8088/reservations/findAllNotCancelled",{
+                axios.get("https://isa-projekat-tim-3.herokuapp.com/reservations/findAllNotCancelled",{
                     headers:{
                         Authorization: "Bearer " + window.sessionStorage.getItem("accessToken")
                     }
                 }).then((response) =>{
                     this.reservations = response.data;
-                    axios.post("http://localhost:8088/reservations/calculateSystemIncome", {
+                    axios.post("https://isa-projekat-tim-3.herokuapp.com/reservations/calculateSystemIncome", {
                         reservationsDTO: this.reservations,
                     },{
                         headers:{

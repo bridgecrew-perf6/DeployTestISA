@@ -26,7 +26,7 @@
             }
         },
         mounted() {
-            axios.get('http://localhost:8088/revisions/user-service-ratings', {
+            axios.get('https://isa-projekat-tim-3.herokuapp.com/revisions/user-service-ratings', {
                 headers: {
                     Authorization: 'Bearer ' + window.sessionStorage.getItem('accessToken')               
                 }

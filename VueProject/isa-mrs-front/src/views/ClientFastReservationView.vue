@@ -35,7 +35,7 @@ import router from '@/router'
         },
         methods: {
             getActions() {
-                axios.get("http://localhost:8088/services/getAvailableFastReservations/" + this.$route.params.id, {
+                axios.get("https://isa-projekat-tim-3.herokuapp.com/services/getAvailableFastReservations/" + this.$route.params.id, {
                     headers:{
                         Authorization: 'Bearer ' + window.sessionStorage.getItem("accessToken")
                     }
@@ -64,7 +64,7 @@ import router from '@/router'
                 let toDate = this.getDate(action.dateTo)
                 console.log(fromDate);
                 console.log(toDate);
-                axios.post("http://localhost:8088/reservations/makeAReservation", {
+                axios.post("https://isa-projekat-tim-3.herokuapp.com/reservations/makeAReservation", {
                     fromDate: fromDate,
                     toDate: toDate,
                     fromTime: action.timeFrom,

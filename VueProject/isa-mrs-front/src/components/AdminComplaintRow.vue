@@ -35,7 +35,7 @@
         props: ["complaint"],
         methods: {
             sendResponse(id, clientName, clientSurname, privilegedUserName, privilegedUserSurname, serviceName, servicePictures, complaint){
-                axios.post("http://localhost:8088/complaints/response", {
+                axios.post("https://isa-projekat-tim-3.herokuapp.com/complaints/response", {
                     id: id,
                     complaint: complaint,
                     response: this.response,

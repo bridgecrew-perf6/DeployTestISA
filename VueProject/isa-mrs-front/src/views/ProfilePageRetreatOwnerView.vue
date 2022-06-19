@@ -32,7 +32,7 @@
         },
         methods: {
             logout() {
-                axios.get("http://localhost:8088/auth/logout", {
+                axios.get("https://isa-projekat-tim-3.herokuapp.com/auth/logout", {
                     headers: {
                         Authorization: 'Bearer ' + window.sessionStorage.getItem("accessToken")
                     }
@@ -44,7 +44,7 @@
         },
         mounted(){
             if (window.sessionStorage.getItem('role') === "ROLE_retreatOwner") {
-                axios.get("http://localhost:8088/users/getLoggedUser", {
+                axios.get("https://isa-projekat-tim-3.herokuapp.com/users/getLoggedUser", {
                     headers: {
                         Authorization: 'Bearer ' + window.sessionStorage.getItem("accessToken")
                     }

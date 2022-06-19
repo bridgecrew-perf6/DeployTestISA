@@ -41,7 +41,7 @@ export default {
     },
     mounted() {
         if (window.sessionStorage.getItem("role") === "ROLE_retreatOwner" || window.sessionStorage.getItem("role") === "ROLE_shipOwner" || window.sessionStorage.getItem("role") === "ROLE_fishingInstructor") {
-            axios.get('http://localhost:8088/services/get-service-availability/' + this.$route.params.id, {
+            axios.get('https://isa-projekat-tim-3.herokuapp.com/services/get-service-availability/' + this.$route.params.id, {
                 headers: {
                     Authorization: 'Bearer ' + window.sessionStorage.getItem('accessToken')
                 }
@@ -60,7 +60,7 @@ export default {
             if (window.sessionStorage.getItem("role") === "ROLE_retreatOwner") path = "retreats";
             else if (window.sessionStorage.getItem("role") === "ROLE_shipOwner") path = "ships";
             else if (window.sessionStorage.getItem("role") === "ROLE_fishingInstructor") path = "adventures";
-            axios.get('http://localhost:8088/' + path + '/get-actions/' + this.$route.params.id, {
+            axios.get('https://isa-projekat-tim-3.herokuapp.com/' + path + '/get-actions/' + this.$route.params.id, {
                 headers: {
                     Authorization: 'Bearer ' + window.sessionStorage.getItem('accessToken')
                 }

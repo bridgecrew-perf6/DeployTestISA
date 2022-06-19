@@ -51,7 +51,7 @@ import router from '@/router'
         },
         methods:{
             changeAdminPassword(){
-                axios.put("http://localhost:8088/users/activateAdmin",
+                axios.put("https://isa-projekat-tim-3.herokuapp.com/users/activateAdmin",
                 {
                     newPassword: this.password.newPassword,
                     confirmPassword: this.password.confirmNewPassword
@@ -79,7 +79,7 @@ import router from '@/router'
         },
         mounted () {
             if (window.sessionStorage.getItem('role') === "ROLE_admin" || window.sessionStorage.getItem("role") === "ROLE_mainAdmin") {
-                axios.get("http://localhost:8088/users/getLoggedAdmin",
+                axios.get("https://isa-projekat-tim-3.herokuapp.com/users/getLoggedAdmin",
                 {
                     headers: {
                         Authorization: 'Bearer ' + window.sessionStorage.getItem("accessToken")

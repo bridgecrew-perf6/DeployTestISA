@@ -73,7 +73,7 @@
         },
         mounted(){
             if (window.sessionStorage.getItem('role') === "ROLE_retreatOwner" || window.sessionStorage.getItem("role") === "ROLE_shipOwner" || window.sessionStorage.getItem("role") === "ROLE_fishingInstructor") {
-                axios.get("http://localhost:8088/reservations/getPrivilegedUserReservations", {
+                axios.get("https://isa-projekat-tim-3.herokuapp.com/reservations/getPrivilegedUserReservations", {
                     headers: {
                         Authorization: 'Bearer ' + window.sessionStorage.getItem("accessToken")
                     }

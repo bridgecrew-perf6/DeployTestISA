@@ -57,7 +57,7 @@ import router from '@/router';
         },
         mounted () {
             if (window.sessionStorage.getItem("role") === "ROLE_client") {
-                axios.get("http://localhost:8088/reservations/adventureReservationHistory", {
+                axios.get("https://isa-projekat-tim-3.herokuapp.com/reservations/adventureReservationHistory", {
                     headers: {
                         Authorization: 'Bearer ' + window.sessionStorage.getItem("accessToken")
                     }
