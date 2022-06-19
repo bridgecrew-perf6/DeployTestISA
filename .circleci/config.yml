@@ -14,7 +14,7 @@ jobs:
       - run: ls -l
       - run:
           name: Build
-          command: cd SpringProject mvn -B -DskipTests=false clean package
+          command: cd SpringProject && mvn -B -DskipTests=false clean package
       - run:
           name: Analyze
           command: cd SpringProject && mvn sonar:sonar -Dsonar.projectKey=$PROJECT_KEY -Dsonar.organization=mzaric13 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
