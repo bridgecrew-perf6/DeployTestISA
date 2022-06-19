@@ -1,0 +1,2 @@
+web:java -jar target/isa-projekat-tim-3-1.0.0.jar
+ps:scale
